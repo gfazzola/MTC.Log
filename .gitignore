@@ -1,0 +1,43 @@
+# Archivos de compilación
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Archivos de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Paquetes NuGet
+packages/
+*.nupkg
+
+# Archivos de logs y caché
+*.log
+*.cache
+*.tmp
+
+# Resultados de tests
+TestResults/
+
+# Archivos de publicación
+publish/
+
+# IDEs externos
+.idea/
+*.sln.iml
+_ReSharper*/
+
+# Archivos temporales del sistema
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Tus carpetas personalizadas
+respaldos/
+temp/

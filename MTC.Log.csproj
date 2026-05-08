@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+	  <Nullable>disable</Nullable>
+	  <ImplicitUsings>disable</ImplicitUsings>
+	  <Company>Guillermo Fazzolari</Company>
+	  <Copyright>Copyright © 2026 Guillermo Fazzolari</Copyright>
+	  <Version>1.0.0</Version>
+	  <AssemblyVersion>1.0.0</AssemblyVersion>
+	  <FileVersion>1.0.0</FileVersion>
+	  
+	  <InformationalVersion>20260101</InformationalVersion>
+	  <Configurations>Debug;Release;ClienteServidor;Cliente;Servidor</Configurations>
+	  <AssemblyTitle>Libreria de manejo de logs</AssemblyTitle>
+	  <AssemblyTitle>Logging library</AssemblyTitle>
+
+	  <PackageId>MTC.Log</PackageId>
+	  <Authors>Guillermo Fazzolari</Authors>
+	  <Description>Logging interfaces and NLog implementation for MTC projects.</Description>
+	  <PackageTags>logging;nlog;mtc;syncduplexrpc;rpc;tcp</PackageTags>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/gfazzola/MTC.Log</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/gfazzola/MTC.Log</RepositoryUrl>
+	  <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	  <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="6.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.en-US.Designer.cs">
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.en-US.resx">
+      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+	<Import Project="$(SolutionDir)CommonSettings.targets" />
+</Project>
