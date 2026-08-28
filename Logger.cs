@@ -213,6 +213,6 @@ namespace MTC.Log
             catch (Exception ex) { result = ex.Message; }
             return result;
         }
-
+        public bool IsDebugEnabled => log?.IsDebugEnabled == true;
     }
 }
