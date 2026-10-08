@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace MTC.Log
 {
@@ -58,9 +55,9 @@ namespace MTC.Log
         }
 
         public static string armarMensajeErrorExcepcion(this Exception ex, string prefijo = "", bool trace = false
-                                                                     /* [CallerMemberName] string memberName = "",
-                                                                      [CallerFilePath] string file = "",
-                                                                      [CallerLineNumber] int line = 0*/)
+                                                                         /* [CallerMemberName] string memberName = "",
+                                                                          [CallerFilePath] string file = "",
+                                                                          [CallerLineNumber] int line = 0*/)
         {
             if (!trace)
             {
